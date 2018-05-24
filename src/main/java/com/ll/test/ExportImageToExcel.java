@@ -1,13 +1,16 @@
 package com.ll.test;
 
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
 import org.apache.poi.hssf.usermodel.HSSFPatriarch;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -41,7 +44,7 @@ public class ExportImageToExcel {
 	   // 插入图片
 	   patriarch2.createPicture(anchor, wb.addPicture(byteArrayOut.toByteArray(), HSSFWorkbook.PICTURE_TYPE_JPEG));
 	   }
-	   fileOut = new FileOutputStream("Excel.xls");
+	   fileOut = new FileOutputStream("D://Excel.xls");
 	   // 写入excel文件
 	   wb.write(fileOut);
 	   System.out.println("----Excle文件已生成------");
@@ -56,6 +59,8 @@ public class ExportImageToExcel {
 	  }
 	   }
 }
+	/*File file=  FileSystemView.getFileSystemView() .getHomeDirectory();//获取用户的桌面路径
+	System.err.println(file);*/
 }
  /* 62 // 关于HSSFClientAnchor(dx1,dy1,dx2,dy2,col1,row1,col2,row2)的参数，有必要在这里说明一下：
   63 // dx1：起始单元格的x偏移量，
@@ -67,4 +72,34 @@ public class ExportImageToExcel {
   69 // col2：终止单元格列序号，从0开始计算；
   70 // row2：终止单元格行序号，从0开始计算，
   71 //添加多个图片时:多个pic应该share同一个DrawingPatriarch在同一个sheet里面。
-*/}
+  	/**
+	 * 将图片进行缩放
+	 * @param data
+	 * @param nw
+	 * @param nh
+	 * @return
+	 */
+    public   byte[] ChangeImgSize(byte[] data, int nw, int nh){     
+        byte[] newdata = null;     
+        try{      
+             BufferedImage bis = ImageIO.read(new ByteArrayInputStream(data));     
+                int w = bis.getWidth();     
+                int h = bis.getHeight();     
+                double sx = (double) nw / w;     
+                double sy = (double) nh / h;     
+                AffineTransform transform = new AffineTransform();     
+                transform.setToScale(sx, sy);     
+                AffineTransformOp ato = new AffineTransformOp(transform, null);     
+                //原始颜色     
+                BufferedImage bid = new BufferedImage(nw, nh, BufferedImage.TYPE_3BYTE_BGR);     
+                ato.filter(bis, bid);     
+                //转换成byte字节     
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();     
+                ImageIO.write(bid, "png", baos);     
+                newdata = baos.toByteArray();     
+        }catch(IOException e){      
+             e.printStackTrace();      
+        }      
+        return newdata;     
+    }
+}
