@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>javaStudy</groupId>
-  <artifactId>javaStudy</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>javaStudy Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-    <properties>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>javaStudy</groupId>
+	<artifactId>javaStudy</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>javaStudy Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
 		<java-version>1.7</java-version>
 		<servlet-version>3.1.0</servlet-version>
 		<junit-version>4.12</junit-version>
@@ -35,11 +35,11 @@
 		<freemarker-version>2.3.23</freemarker-version>
 		<jackson-version>1.9.13</jackson-version>
 		<javassist-version>3.12.1.GA</javassist-version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>   <!-- 文件拷贝时的编码 -->  
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>  
-        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>    <!-- 编译时的编码 -->  
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>   <!-- 文件拷贝时的编码 -->
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>    <!-- 编译时的编码 -->
 	</properties>
-	
+
 	<!-- 阿里云maven仓库 -->
 	<repositories>
 		<repository>
@@ -64,13 +64,13 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-  <dependencies>
-   <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit-version}</version>
-            <scope>test</scope>
-        </dependency>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -114,21 +114,21 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-            <groupId>org.slf4j</groupId>
+			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-            <version>${slf4j-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j-version}</version>
-        </dependency>
+			<version>${slf4j-version}</version>
+		</dependency>
 		<dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>${log4j-version}</version>
-        </dependency>
-        <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j-version}</version>
+		</dependency>
+		<dependency>
 			<artifactId>commons-logging</artifactId>
 			<groupId>commons-logging</groupId>
 			<version>${commons-logging-version}</version>
@@ -140,9 +140,9 @@
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/sqljdbc4 -->
 		<dependency>
-		    <groupId>com.microsoft.sqlserver</groupId>
-		    <artifactId>sqljdbc4</artifactId>
-		    <version>4.0</version>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>sqljdbc4</artifactId>
+			<version>4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -165,14 +165,14 @@
 			<version>${commons-io-version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>com.alibaba</groupId>
-		    <artifactId>fastjson</artifactId>
-		    <version>${fastjson-version}</version>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson-version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>commons-codec</groupId>
-		    <artifactId>commons-codec</artifactId>
-		    <version>${commons-codec-version}</version>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons-codec-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-configuration</groupId>
@@ -180,9 +180,9 @@
 			<version>${commons-configuration-version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.apache.shiro</groupId>
-		    <artifactId>shiro-core</artifactId>
-		    <version>${shiro-version}</version>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>${shiro-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
@@ -190,9 +190,9 @@
 			<version>1.2.4</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.apache.shiro</groupId>
-		    <artifactId>shiro-spring</artifactId>
-		    <version>${shiro-version}</version>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>${shiro-version}</version>
 		</dependency>
 		<!-- *********** -->
 		<dependency>
@@ -225,58 +225,58 @@
 		<!-- Velocity视图所需jar -->
 		<dependency>
 			<artifactId>velocity</artifactId>
-            <groupId>org.apache.velocity</groupId>
+			<groupId>org.apache.velocity</groupId>
 			<version>${velocity-version}</version>
 		</dependency>
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity-tools</artifactId>
-            <version>${velocity-tools-version}</version>
-            <exclusions>
-            	<exclusion>
-            		<artifactId>dom4j</artifactId>
-            		<groupId>dom4j</groupId>
-            	</exclusion>
-            	<exclusion>
-            		<artifactId>oro</artifactId>
-            		<groupId>oro</groupId>
-            	</exclusion>
-            	<exclusion>
-            		<artifactId>sslext</artifactId>
-            		<groupId>sslext</groupId>
-            	</exclusion>
-            	<exclusion>
-            		<artifactId>struts-core</artifactId>
-            		<groupId>org.apache.struts</groupId>
-            	</exclusion>
-            	<exclusion>
-            		<artifactId>struts-taglib</artifactId>
-            		<groupId>org.apache.struts</groupId>
-            	</exclusion>
-            	<exclusion>
-            		<artifactId>struts-tiles</artifactId>
-            		<groupId>org.apache.struts</groupId>
-            	</exclusion>
-            	<exclusion>
-            		<artifactId>commons-validator</artifactId>
-            		<groupId>commons-validator</groupId>
-            	</exclusion>
-            	<exclusion>
-            		<artifactId>commons-beanutils</artifactId>
-            		<groupId>commons-beanutils</groupId>
-            	</exclusion>
-            	<exclusion>
-            		<artifactId>commons-chain</artifactId>
-            		<groupId>commons-chain</groupId>
-            	</exclusion>
-            	<exclusion>
-            		<artifactId>commons-collections</artifactId>
-            		<groupId>commons-collections</groupId>
-            	</exclusion>
-            </exclusions>
-        </dependency>
-        <!-- JSP视图所需jar -->
-        <dependency>
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-tools</artifactId>
+			<version>${velocity-tools-version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>dom4j</artifactId>
+					<groupId>dom4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>oro</artifactId>
+					<groupId>oro</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>sslext</artifactId>
+					<groupId>sslext</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>struts-core</artifactId>
+					<groupId>org.apache.struts</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>struts-taglib</artifactId>
+					<groupId>org.apache.struts</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>struts-tiles</artifactId>
+					<groupId>org.apache.struts</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-validator</artifactId>
+					<groupId>commons-validator</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-beanutils</artifactId>
+					<groupId>commons-beanutils</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-chain</artifactId>
+					<groupId>commons-chain</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-collections</artifactId>
+					<groupId>commons-collections</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- JSP视图所需jar -->
+		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>${jstl-version}</version>
@@ -287,45 +287,45 @@
 			<version>${taglibs-version}</version>
 		</dependency>
 		<!-- Freemarker视图所需jar -->
-        <dependency>
+		<dependency>
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker</artifactId>
 			<version>${freemarker-version}</version>
 		</dependency>
-		
+
 		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-core</artifactId>
-		    <version>2.8.1</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.8.1</version>
 		</dependency>
 		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>2.8.1</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.8.1</version>
 		</dependency>
-		
+
 		<dependency>
-		    <groupId>javassist</groupId>
-		    <artifactId>javassist</artifactId>
-		    <version>${javassist-version}</version>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>${javassist-version}</version>
 		</dependency>
-		
+
 		<dependency>
-		    <groupId>org.aspectj</groupId>
-		    <artifactId>aspectjweaver</artifactId>
-		    <version>1.8.10</version>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.10</version>
 		</dependency>
-		
+
 		<dependency>
-		    <groupId>aspectj</groupId>
-		    <artifactId>aspectjrt</artifactId>
-		    <version>1.5.3</version>
+			<groupId>aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.5.3</version>
 		</dependency>
-		
+
 		<dependency>
-		    <groupId>org.apache.mina</groupId>
-		    <artifactId>mina-core</artifactId>
-		    <version>2.0.16</version>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-core</artifactId>
+			<version>2.0.16</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.mail</groupId>
@@ -340,133 +340,138 @@
 			<classifier>jdk15</classifier>
 		</dependency>
 		<!-- 引入一些常用的 commons包方便处理 -->
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-lang3</artifactId>
-			    <version>3.5</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-io</artifactId>
-			    <version>1.3.2</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-math3</artifactId>
-			    <version>3.6.1</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-compress</artifactId>
-			    <version>1.13</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-collections4</artifactId>
-			    <version>4.1</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-exec</artifactId>
-			    <version>1.3</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-math</artifactId>
-			    <version>2.2</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-pool2</artifactId>
-			    <version>2.4.2</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-configuration2</artifactId>
-			    <version>2.1.1</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-email</artifactId>
-			    <version>1.4</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-csv</artifactId>
-			    <version>1.4</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-dbcp2</artifactId>
-			    <version>2.1.1</version>
-			</dependency>
-			<dependency>
-			    <groupId>commons-dbcp</groupId>
-			    <artifactId>commons-dbcp</artifactId>
-			    <version>1.2.2</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>com.springsource.org.apache.commons.logging</artifactId>
-			    <version>1.1.1</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>com.springsource.org.apache.commons.lang</artifactId>
-			    <version>2.6.0</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>com.springsource.org.apache.commons.io</artifactId>
-			    <version>1.4.0</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>com.springsource.org.apache.commons.collections</artifactId>
-			    <version>3.2.1</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>com.springsource.org.apache.commons.codec</artifactId>
-			    <version>1.6.0</version>
-			</dependency>
-		<!-- 引入一些常用的 commons包方便处理  -->
 		<dependency>
-		    <groupId>org.apache.poi</groupId>
-		    <artifactId>poi</artifactId>
-		    <version>3.7</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.apache.poi</groupId>
-		    <artifactId>poi-ooxml</artifactId>
-		    <version>3.7</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.apache.poi</groupId>
-		    <artifactId>poi-ooxml-schemas</artifactId>
-		    <version>3.7</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-math3</artifactId>
+			<version>3.6.1</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.apache.poi</groupId>
-		    <artifactId>poi-scratchpad</artifactId>
-		    <version>3.7</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>1.13</version>
 		</dependency>
 		<dependency>
-		    <groupId>com.google.code.gson</groupId>
-		    <artifactId>gson</artifactId>
-		    <version>2.2.4</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-exec</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-math</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+			<version>2.4.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-configuration2</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>com.springsource.org.apache.commons.logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>com.springsource.org.apache.commons.lang</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>com.springsource.org.apache.commons.io</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>com.springsource.org.apache.commons.collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>com.springsource.org.apache.commons.codec</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+		<!-- 引入一些常用的 commons包方便处理 -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+			<version>3.7</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 		<!-- 给用户邮件账号密码加密方法 -->
 		<dependency>
-		    <groupId>commons-codec</groupId>
-		    <artifactId>commons-codec</artifactId>
-		    <version>1.9</version>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.9</version>
 		</dependency>
-    
-  </dependencies>
-  <build>
-  	<resources>
+		<!-- 漢字转换为拼音用的包 -->
+		<dependency>
+			<groupId>com.belerweb</groupId>
+			<artifactId>pinyin4j</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<resources>
 			<resource>
 				<directory>src/main/java</directory>
 				<includes>
@@ -478,6 +483,6 @@
 				<directory>src/main/resources</directory>
 			</resource>
 		</resources>
-    <finalName>javaStudy</finalName>
-  </build>
+		<finalName>javaStudy</finalName>
+	</build>
 </project>
